@@ -1,0 +1,35 @@
+/**
+ * DGames main styles
+ *
+ * version: 0.0.1
+ * author: Dezodev
+ */
+
+@import "~ant-design-vue/dist/antd.less";
+@import "./inc/variables";
+
+/* General
+** ======================================================== */
+
+body {
+
+}
+
+/* layout
+** ======================================================== */
+
+#default-layout {
+	& > .ant-layout {
+		min-height: 100vh
+	}
+
+	.ant-layout-sider {
+		padding: 20px 15px 10px;
+	}
+	.ant-layout-content {
+		padding: @padding-lg @padding-lg*2;
+	}
+	.ant-layout-footer {
+		padding: @padding-lg @padding-lg*2;
+	}
+}

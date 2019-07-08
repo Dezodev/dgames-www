@@ -1,9 +1,8 @@
 
 export default {
 	mode: 'universal',
-	/*
-	** Headers of the page
-	*/
+
+	// Headers of the page
 	head: {
 		title: process.env.npm_package_name || '',
 		meta: [
@@ -15,43 +14,34 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		]
 	},
-	/*
-	** Customize the progress-bar color
-	*/
+
+	// Customize the progress-bar color
 	loading: { color: '#fff' },
-	/*
-	** Global CSS
-	*/
+
+	// Global CSS
 	css: [
-		'ant-design-vue/dist/antd.css'
+		{ src: '~/assets/less/main.less', lang: 'less' },
 	],
-	/*
-	** Plugins to load before mounting the App
-	*/
+
+	// Plugins to load before mounting the App
 	plugins: [
 		'@/plugins/antd-ui'
 	],
-	/*
-	** Nuxt.js modules
-	*/
+
+	//Nuxt.js modules
 	modules: [
-		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
 	],
-	/*
-	** Axios module configuration
-	** See https://axios.nuxtjs.org/options
-	*/
+
+	// Axios module configuration
 	axios: {
 	},
-	/*
-	** Build configuration
-	*/
+
+	// Build configuration
 	build: {
-		/*
-		** You can extend webpack config here
-		*/
+		// You can extend webpack config here
 		extend(config, ctx) {
+			ctx.loaders.less.javascriptEnabled = true
 		}
 	}
 }
