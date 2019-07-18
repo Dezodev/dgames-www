@@ -11,8 +11,10 @@
 		"generate": "nuxt generate"
 	},
 	"dependencies": {
-		"ant-design-vue": "^1.1.10",
+		"@fortawesome/fontawesome-free": "^5.9.0",
 		"@nuxtjs/axios": "^5.3.6",
+		"ant-design-vue": "^1.1.10",
+		"lodash": "^4.17.14",
 		"nuxt": "^2.0.0"
 	},
 	"devDependencies": {

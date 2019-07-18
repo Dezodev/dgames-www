@@ -1,0 +1,131 @@
+// Utilities classes
+
+/* Margin
+** ======================================================== */
+
+/* Typography
+** ======================================================== */
+
+// Alignement
+.u-align-left { text-align: left !important; }
+.u-align-right { text-align: right !important; }
+.u-align-center { text-align: center !important; }
+
+// Font weight
+.u-text-w-normal { font-weight: @weight-normal !important; }
+.u-text-w-bold { font-weight: @weight-bold !important; }
+
+// Text style
+.u-text-italic { font-style: italic !important; }
+.u-text-underline { text-decoration: underline !important; }
+.u-text-no-decoration { text-decoration: none !important; }
+
+// Text transform
+.u-text-uppercase { text-transform: uppercase !important; }
+.u-text-lowercase { text-transform: lowercase !important; }
+
+// Text break
+.u-text-wrap {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+.u-text-ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* Sizing
+** ======================================================== */
+
+// Widths
+.mixin-width-util (@i) when (@i >= 0) {
+	.u-w-@{i} {
+		width: @i * 1% !important;
+	}
+	.u-max-w-@{i} {
+		max-width: @i * 1% !important;
+	}
+	.u-min-w-@{i} {
+		min-width: @i * 1% !important;
+	}
+	.mixin-width-util(@i - 5);
+}
+.mixin-width-util(100);
+
+	// Additionnal width
+.u-w-66 { width: calc(100% / 3 * 2) !important; }
+.u-w-33 { width: calc(100% / 3) !important; }
+.u-max-w-66 { max-width: calc(100% / 3 * 2) !important; }
+.u-max-w-33 { max-width: calc(100% / 3) !important; }
+.u-min-w-66 { min-width: calc(100% / 3 * 2) !important; }
+.u-min-w-33 { min-width: calc(100% / 3) !important; }
+.u-w-auto { width: auto !important; }
+
+// Height
+.mixin-height-util (@i) when (@i >= 0) {
+	.u-h-@{i} {
+		height: @i * 1% !important;
+	}
+	.u-max-h-@{i} {
+		max-height: @i * 1% !important;
+	}
+	.u-min-h-@{i} {
+		min-height: @i * 1% !important;
+	}
+	.mixin-height-util(@i - 5);
+}
+.mixin-height-util(100);
+
+	// Additionnal height
+.u-h-66 { height: calc(100% / 3 * 2) !important; }
+.u-h-33 { height: calc(100% / 3) !important; }
+.u-max-h-66 { max-height: calc(100% / 3 * 2) !important; }
+.u-max-h-33 { max-height: calc(100% / 3) !important; }
+.u-min-h-66 { min-height: calc(100% / 3 * 2) !important; }
+.u-min-h-33 { min-height: calc(100% / 3) !important; }
+.u-h-auto { height: auto !important; }
+
+/* Spacing
+** ======================================================== */
+
+@side: top, bottom, left, right;
+
+.u-m-0 { margin: 0 !important; }
+.u-p-0 { padding: 0 !important; }
+
+each(@side, {
+	.u-m-@{value}-0 {
+		margin-@{value}: 0 !important;
+	}
+	.u-m-@{value}-auto {
+		margin-@{value}: auto !important;
+	}
+	.u-m-@{value}-sm {
+		margin-@{value}: @spacer-sm !important;
+	}
+	.u-m-@{value}-md {
+		margin-@{value}: @spacer-md !important;
+	}
+	.u-m-@{value}-lg {
+		margin-@{value}: @spacer-lg !important;
+	}
+	.u-m-@{value}-xl {
+		margin-@{value}: @spacer-xl !important;
+	}
+})
+
+
+.u-m-x-0 { &:extend(.u-m-left-0); &:extend(.u-m-right-0); }
+.u-m-x-auto { &:extend(.u-m-left-auto); &:extend(.u-m-right-auto); }
+.u-m-x-sm { &:extend(.u-m-left-sm); &:extend(.u-m-right-sm); }
+.u-m-x-md { &:extend(.u-m-left-md); &:extend(.u-m-right-md); }
+.u-m-x-lg { &:extend(.u-m-left-lg); &:extend(.u-m-right-lg); }
+.u-m-x-xl { &:extend(.u-m-left-xl); &:extend(.u-m-right-xl); }
+
+.u-m-y-0 { &:extend(.u-m-top-0); &:extend(.u-m-bottom-0); }
+.u-m-y-auto { &:extend(.u-m-top-auto); &:extend(.u-m-bottom-auto); }
+.u-m-y-sm { &:extend(.u-m-top-sm); &:extend(.u-m-bottom-sm); }
+.u-m-y-md { &:extend(.u-m-top-md); &:extend(.u-m-bottom-md); }
+.u-m-y-lg { &:extend(.u-m-top-lg); &:extend(.u-m-bottom-lg); }
+.u-m-y-xl { &:extend(.u-m-top-xl); &:extend(.u-m-bottom-xl); }

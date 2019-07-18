@@ -3,30 +3,83 @@
 ** ======================================================== */
 
 // Color
-@primary-color: #984a59;
-// @info-color: ;
+@primary-color: #ff8f56;
+@info-color: #5588a3;
 // @processing-color: ;
-// @error-color: ;
-// @warning-color: ;
+@error-color: #cd3f3e;
+@warning-color: #f69314;
 
+@color-grey-1: #5e6073;
+@color-grey-2: #63707e;
+@color-grey-3: #929aab;
+@color-grey-4: #dfdfdf;
+@color-grey-5: #e3e3e3;
+@color-grey-6: #faf9f9;
+
+@disabled-color: fade(@color-grey-6, 55%);
 
 // Font
 @font-size-base: 16px;
 @font-size-sm: 14px;
-@font-family: Helvetica, sans-serif;
+@font-family: 'Signika', sans-serif;
 @line-height-base: 1.2;
 
+@weight-normal: 400;
+@weight-bold: 600;
+
 @text-color: #f1f1f1;
-@text-color-secondary: fade(@text-color, 50%);
+@text-color-secondary: #fdf1db;
+@text-color-dark: #2b2b28;
+@text-color-dark-secondary: #4a4a48;
 @heading-color: @text-color;
 @link-color: @primary-color;
+
+@link-hover-decoration: underline;
+
+@font-weight-normal: 400;
+@font-weight-bold: 600;
 
 // Background
 @body-background: #dedede;
 @body-background: #5588a3;
+@body-background: #4a4a48;
+@body-background: #984a59;
 @layout-body-background: @body-background;
 @layout-header-background: #313131;
 @layout-header-background: #145374;
+@layout-header-background: #2b2b28;
+@layout-header-background: #60424c;
+
+@background-color-base: lighten(@body-background, 10%);
+@background-color-light: lighten(@body-background, 20%);
+
+@component-background: @color-grey-1;
+@menu-dark-submenu-bg: #2b2b28;
+
+// Border
+
+@border-color-base: @color-grey-3;
+@border-color-split: @color-grey-3;
+
+// buttons
+
+@btn-primary-color: @text-color-secondary;
+@btn-default-bg: @color-grey-2;
+@btn-disable-bg: lighten(@btn-default-bg, 15%);
+@btn-danger-bg: @color-grey-4;
+
+// Input
+
+@input-color: @text-color;
+@input-placeholder-color: @color-grey-4;
+@input-bg: @component-background;
+
+// Spacing
+
+@spacer-sm: 0.25rem;
+@spacer-md: 0.5rem;
+@spacer-lg: 1rem;
+@spacer-xl: 1.5rem;
 
 // Other primary color
 
@@ -34,3 +87,4 @@
 // @primary-color: #183661;
 // @primary-color: #fdb44b;
 // @primary-color: #5c4d4d;
+// @primary-color: #984a59;

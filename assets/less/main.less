@@ -7,12 +7,46 @@
 
 @import "~ant-design-vue/dist/antd.less";
 @import "./inc/variables";
+@import "./inc/utilities";
 
 /* General
 ** ======================================================== */
 
-body {
+// Haeding
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	margin-top: 15px;
+}
 
+// Input
+.ant-input-group-addon {
+	background: darken(@input-bg, 10%);
+}
+
+.ant-select-dropdown-menu-item-active,
+.ant-select-dropdown-menu-item:hover,
+.ant-time-picker-panel-select li:hover {
+	background: lighten(@input-bg, 10%);
+}
+.ant-select-dropdown-menu-item-selected,
+li.ant-time-picker-panel-select-option-selected {
+	&, &:hover {
+		background: lighten(@input-bg, 20%);
+	}
+}
+
+.ant-select-selection--multiple {
+	.ant-select-selection__choice {
+		background: darken(@input-bg, 10%);
+	}
+}
+
+.ant-calendar-date:hover {
+	color: @text-color-dark-secondary;
+}
+
+input:not([type="submit"]):not([type="button"]) {
+	background: @input-bg;
 }
 
 /* layout
@@ -31,5 +65,21 @@ body {
 	}
 	.ant-layout-footer {
 		padding: @padding-lg @padding-lg*2;
+	}
+}
+
+/* Menu
+** ======================================================== */
+
+.ant-menu {
+	.menu-icon {
+		margin-right: 10px; max-width: 16px; max-height: 16px;
+	}
+	.ant-menu-sub.ant-menu-inline {
+		padding: 10px 0; box-shadow: none !important;
+		& > .ant-menu-item,
+		& > .ant-menu-submenu > .ant-menu-submenu-title {
+			line-height: 25px; height: 25px;
+		}
 	}
 }
