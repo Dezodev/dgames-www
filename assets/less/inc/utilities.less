@@ -129,3 +129,28 @@ each(@side, {
 .u-m-y-md { &:extend(.u-m-top-md); &:extend(.u-m-bottom-md); }
 .u-m-y-lg { &:extend(.u-m-top-lg); &:extend(.u-m-bottom-lg); }
 .u-m-y-xl { &:extend(.u-m-top-xl); &:extend(.u-m-bottom-xl); }
+
+/* Display
+** ======================================================== */
+
+@displayVals: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex;
+
+each(@displayVals, {
+	.u-d-@{value} {
+		display: @value;
+	}
+})
+
+/* Other
+** ======================================================== */
+
+// Lists
+.list-unstyled { padding-left: 0; list-style: none; }
+.list-inline { .list-unstyled; }
+.list-inline-item {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: @spacer-md;
+	}
+}

@@ -2,8 +2,8 @@
 	<div class="container">
 		<h2>Liste des Jeux</h2>
 
-		<a-row>
-			<a-col :span="8" v-for="gam in games_lists" :key="gam.id">
+		<div class="row">
+			<div class="col-xs-4" v-for="gam in games_lists" :key="'game_' + gam.id">
 				<a-card>
 					<a-card-meta
 						:title="gam.label"
@@ -14,8 +14,8 @@
 						<a-button type="primary">Jouer <i class="fas fa-gamepad u-m-left-md"></i></a-button>
 					</nuxt-link>
 				</a-card>
-			</a-col>
-		</a-row>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -27,9 +27,15 @@ export default {
 				{
 					id: 'hangman',
 					label: 'Jeu du pendu',
-					description: 'Jouer pour trouver le mot choisi.',
+					description: '',
 					route: '/games/hangman'
-				}
+				},
+				{
+					id: 'tictactoe',
+					label: 'Tic tac toe',
+					description: '',
+					route: '/games/tictactoe'
+				},
 			]
 		};
 	}

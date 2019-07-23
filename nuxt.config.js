@@ -13,7 +13,8 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Signika&display=swap' }
-		]
+		],
+		script: []
 	},
 
 	// Customize the progress-bar color
@@ -21,8 +22,10 @@ export default {
 
 	// Global CSS
 	css: [
-		{ src: '~/assets/less/main.less', lang: 'less' },
 		{ src: '@fortawesome/fontawesome-free/css/all.css' },
+		{ src: 'flexboxgrid/dist/flexboxgrid.css' },
+		{ src: 'emoji-awesome/dist/css/twitter.min.css' },
+		{ src: '~/assets/less/main.less', lang: 'less' },
 	],
 
 	// Plugins to load before mounting the App

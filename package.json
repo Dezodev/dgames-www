@@ -13,7 +13,10 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.9.0",
 		"@nuxtjs/axios": "^5.3.6",
+		"an-array-of-french-words": "^1.0.0",
 		"ant-design-vue": "^1.1.10",
+		"emoji-awesome": "0.0.2",
+		"flexboxgrid": "^6.3.1",
 		"lodash": "^4.17.14",
 		"nuxt": "^2.0.0"
 	},

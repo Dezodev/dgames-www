@@ -54,6 +54,14 @@ export default {
 					imgIcon: false,
 				},
 				{
+					key: 'tictactoe',
+					label: 'Tic tac toe',
+					route: '/games/tictactoe',
+					aIcon: false,
+					faIcon: false,
+					imgIcon: '/images/tic-tac-toe.svg',
+				},
+				{
 					key: 'trystyle',
 					label: 'Styles',
 					route: '/trystyle',
