@@ -192,6 +192,9 @@ export default {
 				return false;
 			}
 		}
+	},
+	head: {
+		title: 'Jeu du pendu',
 	}
 }
 </script>

@@ -38,6 +38,9 @@ export default {
 				},
 			]
 		};
+	},
+	head: {
+		title: 'Mini-jeux',
 	}
 }
 </script>

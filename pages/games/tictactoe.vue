@@ -259,14 +259,9 @@ export default {
 
 			return true;
 		},
+	},
+	head: {
+		title: 'Tic tac toe',
 	}
 }
-
-// isUniform (input) {
-// 			if (input[0] != 0) {
-// 				return input.every(element => element === input[0]);
-// 			} else {
-// 				return false;
-// 			}
-// 		}
 </script>
