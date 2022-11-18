@@ -18,7 +18,7 @@
 		"emoji-awesome": "0.0.2",
 		"flexboxgrid": "^6.3.1",
 		"lodash": "^4.17.14",
-		"nuxt": "^2.0.0"
+		"nuxt": "^2.15.8"
 	},
 	"devDependencies": {
 		"less": "^3.9.0",
